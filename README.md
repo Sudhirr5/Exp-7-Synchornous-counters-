@@ -1,14 +1,15 @@
 # 4 bit Synchornous counters
-## Name : R. SUDHIR KUMAR
+### Name : R. SUDHIR KUMAR
 ### Register number : 212223230221
-### AIM: To implement 4 bit up countes and validate  functionality.
+### AIM: 
+To implement 4 bit up countes and validate  functionality.
 ### HARDWARE REQUIRED:
 PC, Cyclone II , USB flasher
 ### SOFTWARE REQUIRED:  
 Quartus prime
 ### THEORY 
 
-## UP COUNTER 
+### UP COUNTER 
 The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
 
 The counter (“count“) value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
