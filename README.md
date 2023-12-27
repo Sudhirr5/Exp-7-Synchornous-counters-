@@ -1,4 +1,4 @@
-# 4 bit Synchornous counters
+# Implementation of 4 bit Synchornous counters
 ### Name : R. SUDHIR KUMAR
 ### Register number : 212223230221
 ### AIM: 
@@ -7,7 +7,7 @@ To implement 4 bit up countes and validate  functionality.
 PC, Cyclone II , USB flasher
 ### SOFTWARE REQUIRED:  
 Quartus prime
-### THEORY 
+### THEORY:
 
 ### UP COUNTER 
 The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
@@ -46,7 +46,7 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
 
 
-### Procedure
+### Procedure :
 #### 1.Create a new project in QuartusII software. 
 #### 2.Name the project as uc for upcounter and dc for down counter. 
 #### 3.Create a new verilog hdl file in the project file. 
@@ -55,16 +55,16 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 #### 6.Create a loop using if-else with condition parameter as reset value. 7.End the loop. 8.End the module.
 
 
-### PROGRAM FOR UPCOUNTER
+### PROGRAM FOR UPCOUNTER :
 ![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/87da7100-9136-462d-908b-0a07bb34c96b)
 
-### RTL LOGIC UP COUNTER
+### RTL LOGIC UP COUNTER :
 ![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/09f535b0-b007-45bd-a855-0f20b362ba4e)
 
-### TIMING DIGRAMS FOR UP COUNTER 
+### TIMING DIGRAMS FOR UP COUNTER :
 ![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/2c6dc5c9-670d-4856-b9e8-a481fd2252f0)
 
-### TRUTH TABLE 
+### TRUTH TABLE :
 
 ![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/666d6f4d-8a69-4f54-aba6-894caf2060a3)
 
@@ -74,6 +74,6 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 
 
-### RESULTS 
+### RESULTS :
 
 To design a Synchornous counters up counter
