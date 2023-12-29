@@ -1,15 +1,12 @@
 # Implementation of 4 bit Synchornous counters
 ### Name : R. SUDHIR KUMAR
 ### Register number : 212223230221
-### AIM: 
-To implement 4 bit up countes and validate  functionality.
-### HARDWARE REQUIRED:
-PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:  
-Quartus prime
-### THEORY:
+### AIM: To implement 4 bit up and down counters and validate  functionality.
+### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:   Quartus prime
+### THEORY 
 
-### UP COUNTER 
+## UP COUNTER 
 The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
 
 The counter (“count“) value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
@@ -40,40 +37,74 @@ Four-bit “Up” Counter
 ![image](https://user-images.githubusercontent.com/36288975/169644758-b2f4339d-9532-40c5-af40-8f4f8c942e2c.png)
 
 
+
+## DOWN COUNTER 
+
 As well as counting “up” from zero and increasing or incrementing to some preset value, it is sometimes necessary to count “down” from a predetermined value to zero allowing us to produce an output that activates when the zero count or some other pre-set value is reached.
 
 This type of counter is normally referred to as a Down Counter, (CTD). In a binary or BCD down counter, the count decreases by one for each external clock pulse from some preset value. Special dual purpose IC’s such as the TTL 74LS193 or CMOS CD4510 are 4-bit binary Up or Down counters which have an additional input pin to select either the up or down count mode.
 ![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
 
 
-### Procedure :
-#### 1.Create a new project in QuartusII software. 
-#### 2.Name the project as uc for upcounter and dc for down counter. 
-#### 3.Create a new verilog hdl file in the project file. 
-#### 4.Name the module as dc and uc for down counter and up counter. 
-#### 5.Within the module declare input and output variables. 
-#### 6.Create a loop using if-else with condition parameter as reset value. 7.End the loop. 8.End the module.
-
-
-### PROGRAM FOR UPCOUNTER :
-![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/87da7100-9136-462d-908b-0a07bb34c96b)
-
-### RTL LOGIC UP COUNTER :
-![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/09f535b0-b007-45bd-a855-0f20b362ba4e)
-
-### TIMING DIGRAMS FOR UP COUNTER :
-![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/2c6dc5c9-670d-4856-b9e8-a481fd2252f0)
-
-### TRUTH TABLE :
-
-![image](https://github.com/Thamizhjo/Exp-7-Synchornous-counters-/assets/123891476/666d6f4d-8a69-4f54-aba6-894caf2060a3)
+4-bit Count Down Counter
+### Procedure
+~~~
+1.Create a new project in Quartus II software.
+2.Name the project as uc for upcounter and dc for downcounter.
+3.Create a new Verilog HDL file in the project file.
+4.Name the module as dc and uc for downcounter and upcounter.
+5.Within the module declare input and output variables.
+6.Complete the program.
+7.End the module.
+~~~
 
 
 
+### PROGRAM
+## UP COUNTER:
+~~~
+module uc(clk, A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+A[2]=(((A[0])&(A[1]))^A[2]);
+A[1]=(A[0])^A[1];
+A[0]=A[0]^1;
+end
+endmodule
+~~~
+
+## DOWN COUNTER:
+~~~
+module dc(clk,A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+A[2]=(((~A[0])&(~A[1]))^A[2]);
+A[1]=(~A[0])^A[1];
+A[0]=1^A[0];
+end
+endmodule
+~~~
+
+
+### RTL LOGIC UP COUNTER AND DOWN COUNTER
+## UP COUNTER
+![image](https://github.com/23006111/Exp-7-Synchornous-counters-/assets/145981696/4fb3ccb9-0015-4ee2-abc0-e7c1faffbd86)
+## DOWN COUNTER
+![image](https://github.com/23006111/Exp-7-Synchornous-counters-/assets/145981696/f47a1084-fb16-4fb0-af06-94d46bf0f021)
 
 
 
+### TIMING DIGRAMS FOR COUNTER 
+## UPCOUNTER
+![image](https://github.com/23006111/Exp-7-Synchornous-counters-/assets/145981696/a67c2553-fca5-402e-93a6-14d27cadfa67)
 
-### RESULTS :
 
-To design a Synchornous counters up counter
+## DOWN COUNTER
+![image](https://github.com/23006111/Exp-7-Synchornous-counters-/assets/145981696/b97b30d3-e948-48c8-a5c6-ba51ff7ba8cc)
+
+### RESULTS
+Thus, the flipflops are implemented using verilog.
